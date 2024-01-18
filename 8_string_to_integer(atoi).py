@@ -18,6 +18,8 @@ class Solution(object):
         while i < n and s[i] in ['+','-']:
             negative = s[i] == '-'
             i += 1
+            if i < n and s[i] in ['+','-']:
+                return 0
 
         while i < n and s[i].isdigit():
             result = result*10 + int(s[i])
