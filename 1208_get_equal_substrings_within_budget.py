@@ -6,7 +6,7 @@ class Solution(object):
         :type maxCost: int
         :rtype: int
         """
-        i = j = 0
+        i = 0
         current_cost = 0 
         max_length = 0 
 
@@ -18,4 +18,4 @@ class Solution(object):
 
             max_length = max(max_length, j - i + 1)
 
-        return 0 if current_cost > maxCost else max_length
+        return max_length
