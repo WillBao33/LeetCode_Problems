@@ -1,18 +1,18 @@
-# class Solution:
-#     def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:
-#         queue = deque([(startGene, 0)])
-#         seen = {startGene}
+class Solution:
+    def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:
+        queue = deque([(startGene, 0)])
+        seen = {startGene}
 
-#         while queue:
-#             node, steps = queue.popleft()
-#             if node == endGene:
-#                 return steps
+        while queue:
+            node, steps = queue.popleft()
+            if node == endGene:
+                return steps
 
-#             for c in "ACGT":
-#                 for i in range(len(node)):
-#                     neighbor = node[:i] + c + node[i+1:]
-#                     if neighbor not in seen and neighbor in bank:
-#                         seen.add(neighbor)
-#                         queue.append((neighbor, steps+1))
+            for c in "ACGT":
+                for i in range(len(node)):
+                    neighbor = node[:i] + c + node[i+1:]
+                    if neighbor not in seen and neighbor in bank:
+                        seen.add(neighbor)
+                        queue.append((neighbor, steps+1))
 
-#         return -1
+        return -1
