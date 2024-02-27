@@ -14,3 +14,21 @@ class Solution:
             prev = temp
 
         return curr
+
+
+    # def dp(i):
+    #             if i < 0:
+    #                 return 0
+    
+    #             if i in memo:
+    #                 return memo[i]
+    
+    #             memo[i] = max(dp(i-1), dp(i-2)+nums[i])
+    
+    #             return memo[i]
+    
+    #         if not nums:
+    #             return 0
+    
+    #         memo = {}
+    #         return dp(len(nums)-1)
